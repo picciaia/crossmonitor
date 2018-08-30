@@ -11,19 +11,19 @@ Moreover the Controller can update the Model (Cross values and update period) by
 
 
 
-						  Model
-					SI	/		\
+						Model
+					SI  /		\
 					   /		 \
 					  / 		  \ Method
-					 /			   \	
-			SL  	/               \
-				   / SI       SL     \
-	View (MainWindow) --------->  Controller
-			*		   Method			*
-			*		<----------			*
-			*							*
-			*							*
-	 User interaction			  Async worker (CrossProvider)
+					 /		   \	
+			          SL    /                   \
+				       /   SI          SL    \
+	                View (MainWindow)     --------->  Controller
+			*		       Method	        *
+			*		    <----------		*
+			*					*
+			*					*
+	 User interaction			      Async worker (CrossProvider)
 	 
 	 
 	 
