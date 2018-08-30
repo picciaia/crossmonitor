@@ -1,8 +1,8 @@
 # crossmonitor
-A simple Qt forex cross monitor to use with Bitstamp
-This application is an MVC-like simple tool to read Bitcon-to-EUR quotation from BitStamp service.
+A simple Qt forex cross monitor to use with Bitstamp API.
+This application is a simple MVC-like  tool to read Bitcon-to-EUR quotation from Bitstamp service.
 
-The Model (model.h/cpp) is composed by the cross information (cross.h/cpp) together with the URL service and the refresh period.
+The Model (model.h/cpp) reports the cross information (cross.h/cpp) together with the service URL and the refresh period.
 The Model is completely separated from the View (MainWindow.h/cpp/ui) and communicates its updates by using the Qt mechanism of SIGNALS/SLOTS. With this approach the Model can exists by knowing nothing about the View.
 The View is implemented as a standard Qt window (not QML-like) and responds to the user actions (currently only the QSpinBox to modify the refresh period). 
 The Controller receives the user inputs (as SIGNALS) from the view and also creates and maintains a parallel worker, implemented using a QTTimer, to access cross information in an async-like architecture that supports SIGNALS/SLOTS.
